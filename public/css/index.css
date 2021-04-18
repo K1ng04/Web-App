@@ -1,0 +1,40 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    margin-top: 0;
+}
+
+.header {
+    background: purple;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-top: 0px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+input:hover {
+    border: 1.5px solid;
+    border-color: blue;
+}
+
+fieldset {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: azure;
+}
+
+#sub {
+    margin-top: 8px;
+}
