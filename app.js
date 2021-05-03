@@ -52,18 +52,10 @@ app.post('/submit',(req, res)=> {
     dbcon.connect()
     sql.connect(config, (err) => {
         if (err) console.log(err)
-        const table = new sql.Table('Form')
-        table.create = false;
-        table.columns.add('FirstName', sql.NVarChar(255), { nullable: true })
-        table.columns.add('LastName', sql.NVarChar(255), { nullable: true })
-        table.rows.add(req.body.First, req.body.Last)
         const request = new sql.Request()
-        request.bulk(table, (err, result) => {
-            if (err) console.log(err)
-            console.log(result)
-        })
-        res.end();
+        request.query`INSERT INTO dbo.FORM (FirstName, LastName) VALUES (${req.body.First}, ${req.body.Last})`
     })
+    res.end()      
     
 
 
