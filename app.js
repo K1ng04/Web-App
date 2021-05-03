@@ -36,7 +36,7 @@ app.get('/form/:id', (req, res) => {
     })
 })
 })
-app.post('/form/:id/:first/:last', (req, res) => {
+app.put('/form/:id/:first/:last', (req, res) => {
      const pool = new sql.ConnectionPool(config)
      pool.connect()
      sql.connect(config, () => {
